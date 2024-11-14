@@ -8,6 +8,12 @@
  * All Rights Reserved.
  ************************************************************************************/
 
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/vtiger_errors.log');
+
 if (!file_exists("vendor/autoload.php")) {
     echo "Please install composer dependencies.";
     exit;
